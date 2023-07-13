@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- bs css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+
+<body>
+   <div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-dark w-100" id="myBtnApp">append myBtn</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-dark w-100" id="myBtnPre">prepend myBtn</button>
+        </div>
+    </div>
+   </div>
+   <div class="container mt-5" id="myContainer">
+    <h3 id="myH3">
+        hoihiuinpojdouhiugapog8
+    </h3>
+   </div>
+
+
+    <!-- bs-js src -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <!-- jq src -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <!-- jq start -->
+    <script>
+        $(document).ready(function () {
+            const btnApp = $('#myBtnApp')
+            const btnPre = $('#myBtnPre')
+            const myContainer = $('#myContainer');
+            console.log('btnApp',btnApp);
+            console.log('btnPre',btnPre);
+            console.log('myContainer',myContainer);
+
+            // 宣告要放入的變數
+           
+            
+            
+            // 用變數 i 來計數
+            let i = 0 ;
+            
+            // append / prepend /////////////////////
+            //  元素內部的 最後 與 最前
+            //  *******append ********** 重要(懶人包)
+                
+            btnApp.click(function(){
+                i++
+                // 把 變數i 放在字串裡才不會換行
+                
+                let AppData = `<h6>AppData => ${i} </h6>`;
+                
+                myContainer.append(AppData)                
+            })  
+            btnPre.click(function(){
+                i++
+                let PreData = `<h6>PreData => ${i}</h6>`;
+                myContainer.prepend(PreData);
+            })
+
+
+        });
+    </script>
+    <!-- jq end -->
+</body>
+
+</html>
