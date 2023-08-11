@@ -20,7 +20,7 @@
                     <img src="https://picsum.photos/id/28/600/300" class="card-img-top" alt="...">
                     <div class="card-body" id="body1">
                       <h5 class="card-title">日本行</h5>
-                      <p class="card-text">來去日本</p>
+                      <p class="card-text">來去日本 兩萬元</p>
                       <a href="#" class="btn btn-dark w-100" id="myBtn1" data-price="20000">去這裡</a>
                     </div>
                   </div>
@@ -31,7 +31,7 @@
                     <img src="https://picsum.photos/id/29/600/300" class="card-img-top" alt="...">
                     <div class="card-body" id="body2">
                       <h5 class="card-title">泰國行</h5>
-                      <p class="card-text">來去泰國.</p>
+                      <p class="card-text">來去泰國.三萬元</p>
                       <a href="#" class="btn btn-dark w-100" id="myBtn2" data-price="30000">去這裡</a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                 let sale = Number(price)*0.8;
                 console.log('price',price);
                 console.log('sale',sale);
-                let content = `<h4 class="card-text">${price} 特價八折為 ${sale}</h4>`
+                let content = `<h4 class="card-text"> 原價 ${price} 特價八折為 ${sale}</h4>`
                 $('#body1').append(content)
                 $(this).remove()
 
@@ -78,7 +78,7 @@
                 let sale = Number(price)*0.8;
                 console.log('price',price);
                 console.log('sale',sale);
-                let content = `<h4 class="card-text">${price} 特價八折為 ${sale}</h4>`
+                let content = `<h4 class="card-text"> 原價 ${price} 特價八折為 ${sale}</h4>`
                 $('#body2').append(content)
                 $(this).remove()
 
